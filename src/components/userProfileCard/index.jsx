@@ -5,30 +5,33 @@ const UserProfileCard = () => {
   const [userName, setUserName] = useState('');
   const [userImage, setUserImage] = useState('');
   const [userBio, setUserBio] = useState('');
-  const [profile, setProfile]= useState([])
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-  
-    setProfile([...userName,...userImage,...userBio])
-    
+    setUserName('');
+    setUserImage('');
+    setUserBio('');
     setClicked(true);
-  
-  }
+
+   
+  };
 
   return (
     <div>
       <input
+        value={userName}
         onChange={(e) => setUserName(e.target.value)}
         type="text"
         placeholder="Name"
       />
       <input
+        value={userImage}
         onChange={(e) => setUserImage(e.target.value)}
         type="text"
         placeholder="Image URL"
       />
       <input
+        value={userBio}
         onChange={(e) => setUserBio(e.target.value)}
         type="text"
         placeholder="Bio"

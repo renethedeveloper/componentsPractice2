@@ -1,0 +1,12 @@
+.dot_active {
+    background-color: pink;
+  }
+  .dot {
+    background-color: blue;
+  }
+  *{
+    margin:auto;
+    text-align: center;
+  }
+
+  
