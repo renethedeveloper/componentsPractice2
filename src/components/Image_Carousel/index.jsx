@@ -8,21 +8,21 @@ const [image, setImage] =useState(["https://m.media-amazon.com/images/I/61VQRkwA
 
 const [currentIndex, setCurrentIdex] = useState(0);
 
-//when they click next, if the previous index plus one equals the carousel length, then do nothing, as there are no more images, if there is more room to go, set the prevIndex to previous +1
+//when they click next, if the previous index plus one equals the carousel length, then if goes to the zero index, the beginning of the index, , if there is more room to go, set the prevIndex to previous +1
 const handleNext =()=>{
     setCurrentIdex((prevIndex)=>
     prevIndex +1 === image.length? 0: prevIndex +1)
 }
-//if taking away one is less than zero, do nothing, if not, move down one unit in index. If moving down would mean less than zero, then move back to the top of the last image, image.length -1. Not sure why this one required a return??? The others did not. 
+//if prevIndex -1 is equal to or more than 0, then go ahead and move down in index, if not, then move to the top of the index. This wraps around the index, like A CAROUSEL!!
 const handlePrevious = () => {
     setCurrentIdex((prevIndex) => {
       return prevIndex - 1 >= 0 ? prevIndex - 1 : image.length - 1;
     });
   };
-  
-const handledotClick=(index)=>{
-setCurrentIdex(index)
-};
+  //couldn't get this to work.....
+// const handledotClick=(index)=>{
+// setCurrentIdex(index)
+// };
 
 return (
     //this just displays the image but only at the currentIndex.
@@ -40,7 +40,7 @@ return (
       
       <button onClick={handlePrevious}>Previous</button>
             <button onClick={handleNext}>Next</button> 
-           
+
      
     </div>
   );
