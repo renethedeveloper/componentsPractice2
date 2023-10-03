@@ -16,12 +16,12 @@ function App() {
 
   return (
     <>
-     {<QuizCard/>}
-     {/* { <NewTicker/>} 
-      {<ColorPicker/>} 
-      {<UserProfileCard/> }
-      {<RateReview/> }
-    <ImageCarousel/>  */}
+     {/* {<QuizCard/>} */}
+      {/* { <NewTicker/>}  */}
+      {/* {<ColorPicker/>}  */}
+      {/* {<UserProfileCard/> } */}
+      {/* {<RateReview/> } */}
+    {  <ImageCarousel/> }
      
     </>
   )

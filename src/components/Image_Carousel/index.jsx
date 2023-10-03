@@ -33,7 +33,7 @@ return (
         key={currentIndex}
         src={image[currentIndex]}
         alt={image[currentIndex]}
-        style={{ maxHeight: "300px", marginBottom: "0" }}
+        style={{ maxHeight: "500px", marginBottom: "0" }}
 
       />
       </div>
